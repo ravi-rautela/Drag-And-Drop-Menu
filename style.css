@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dragable__box {
+    background-color: rgb(228, 235, 235);
+    height: 25rem;
+    width: 25rem;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+
+.deatils {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    margin: 16px 0px;
+    border-radius: 5px;
+    cursor:grab;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.items {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.items img {
+    margin-right: 7px;
+    height: 30px;
+}
+
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.deatils.dragging :where(.items, img){
+    opacity: 0;
+}
